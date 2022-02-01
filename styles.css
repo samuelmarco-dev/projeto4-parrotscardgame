@@ -1,0 +1,96 @@
+*{
+    --cor-de-fundo: #EEF9BF;
+    --cor-de-titulo: #75B79E;
+    --cor-fundo-cartas: #A7E9AF;
+    --sombra-carta: #99CEA8;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+}
+
+/* ESTILIZAÇÃO DA TAG HEADER */
+
+header{
+    width: 100%;
+    height: 63px;
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+header h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 66px;
+    color: var(--cor-de-titulo);
+}
+
+/* ESTILIZAÇÃO DA TAG MAIN E SEUS FILHOS */
+main{
+    width: 100%;
+    background-color: coral;
+    margin-top: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    max-width: 90%;
+    min-height: 326px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: cornsilk;
+}
+
+.cartas-jogo{
+    min-width: 117px;
+    height: 146px;
+    background-color: var(--cor-fundo-cartas);
+    border-radius: 5px;
+    border: 1px solid var(--sombra-carta);
+    margin: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+/* EFEITOS PARA ROTAÇÃO DAS CARTAS */
+.face{
+    width: 100%;
+    height: 100%;
+    /* background-color: #A7E9AF; */
+    /* border-radius: 10px; */
+    /* box-shadow: 1px 1px 1px rgba(0,0,0,.3); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .4s;
+    transform-style: preserve-3d;
+}
+
+.verso-carta {
+    transform: rotateY(180deg);
+}
+
+.cartas-jogo:active .verso-carta {
+    transform: rotateY(0deg);
+}
+
+.cartas-jogo:active .frente-carta {
+    transform: rotateY(-180deg);
+}
