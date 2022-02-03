@@ -14,7 +14,7 @@ body{
 header{
     width: 100%;
     height: 63px;
-    background-color: violet;
+    /* background-color: violet; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@ header h1{
 /* ESTILIZAÇÃO DA TAG MAIN E SEUS FILHOS */
 main{
     width: 100%;
-    background-color: coral;
+    /* background-color: coral; */
     margin-top: 47px;
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@ section{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: cornsilk;
+    /* background-color: cornsilk; */
 }
 
 .cartas-jogo{
@@ -79,7 +79,7 @@ img{
     justify-content: center;
     position: absolute;
     backface-visibility: hidden;
-    transition: all .4s;
+    transition: all 0.3s;
     transform-style: preserve-3d;
 }
 
